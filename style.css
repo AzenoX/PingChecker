@@ -1,0 +1,103 @@
+html, body{
+    background: #18212F;
+}
+
+h1{
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: center;
+
+    color: #fff;
+}
+h1 + p{
+    text-align: center;
+
+    color: #aaa;
+}
+
+.wrapper{
+    background: #293444;
+
+    height: 60vh;
+    width: 60vw;
+
+    padding: 1em;
+
+    margin-top: 4vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media screen and (max-width: 1500px) {
+    .wrapper{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .wrapper{
+        width: 98vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    .graph_wrapper .graph:nth-child(7),
+    .graph_wrapper .graph:nth-child(8),
+    .graph_wrapper .graph:nth-child(9),
+    .graph_wrapper .graph:nth-child(10),
+    .graph_wrapper .graph:nth-child(11),
+    .graph_wrapper .graph:nth-child(12),
+    .graph_wrapper .graph:nth-child(13),
+    .graph_wrapper .graph:nth-child(14),
+    .graph_wrapper .graph:nth-child(15),
+    .graph_wrapper .graph:nth-child(16),
+    .graph_wrapper .graph:nth-child(17),
+    .graph_wrapper .graph:nth-child(18),
+    .graph_wrapper .graph:nth-child(19),
+    .graph_wrapper .graph:nth-child(20){
+        display: none;
+    }
+}
+
+.graph_wrapper .graph{
+    color: #fff;
+}
+
+.graph_wrapper .graph:nth-child(1) > th{
+    font-weight: bolder;
+}
+
+.graph_wrapper .graph:nth-child(1) > td.active {
+    transform-origin: bottom;
+    animation: revealing-bars 1s ease-in-out;
+}
+@keyframes revealing-bars {
+    0%  { transform: scaleY( 0 ); }
+    15% { transform: scaleY( 1 ); }
+}
+
+.charts-css.column{
+    --labels-size: 50px !important;
+}
+
+
+.error{
+    font-size: 1.8em;
+
+    color: #d32f2f;
+    font-weight: bold;
+
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: fit-content;
+}
+.error:after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    animation: underline 2s infinite;
+}
+@keyframes underline {
+    0% { width: 0; background-color: #d32f2f;}
+    100% {width: 100%; background-color: transparent;}
+}
